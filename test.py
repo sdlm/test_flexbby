@@ -26,7 +26,6 @@ if __name__ == "__main__":
 	# check url
 	if not (re.match('^http://', url) or re.match('^https://', url)):
 		url = 'http://' + url
-	print('url: {0}'.format(url))
 
 	# download pahe
 	r = requests.get(url)
@@ -37,7 +36,6 @@ if __name__ == "__main__":
 
 	# remove style attribute
 	for t in tags:
-		print(t.prettify())
 		del t['style']
 
 	# print results
